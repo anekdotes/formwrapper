@@ -22,17 +22,17 @@ abstract class Control
      *
      * @return string The encoded HTML field with the option="value".
      */
-    public function get_opts($opts)
+    public function getOpts($opts)
     {
-        $h = '';
+        $html = '';
         if (!array_key_exists('class', $opts)) {
             $opts['class'] = 'form-control';
         }
         foreach ($opts as $key => $value) {
-            $h .= " $key=\"$value\"";
+            $html .= " $key=\"$value\"";
         }
 
-        return $h;
+        return $html;
     }
 
     abstract public function prepare($arguments);

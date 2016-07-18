@@ -28,9 +28,9 @@ class Text extends Control
         $name = $arguments[0];
         $opts = $arguments[1];
         $value = $arguments[2];
-        $h = '<input type="text" name="'.$name.'" value="'.$value.'"';
-        $h .= $this->get_opts($opts);
-        $h .= '/>';
+        $html = '<input type="text" name="'.$name.'" value="'.$value.'"';
+        $html .= $this->getOpts($opts);
+        $html .= '/>';
 
         return $h;
     }
