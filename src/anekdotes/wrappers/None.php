@@ -15,7 +15,8 @@ namespace Anekdotes\FormWrapper\Wrappers;
  */
 class None
 {
-    public function handle($title, $input){
-        return $input;   
+    public function handle($title, $input)
+    {
+        return $input;
     }
 }

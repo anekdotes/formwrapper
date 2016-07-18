@@ -16,22 +16,24 @@ namespace Anekdotes\FormWrapper\Controls;
 abstract class Control
 {
     /**
-     * Generates the option + values in the provided field. Ex : id="name"
-     * @param  string[] $opts    Array containg the values to put in the field
-     * @return string            The encoded HTML field with the option="value".
+     * Generates the option + values in the provided field. Ex : id="name".
+     *
+     * @param string[] $opts Array containg the values to put in the field
+     *
+     * @return string The encoded HTML field with the option="value".
      */
-    public function get_opts($opts) {
+    public function get_opts($opts)
+    {
         $h = '';
-        if (!array_key_exists('class', $opts)) 
-        {
+        if (!array_key_exists('class', $opts)) {
             $opts['class'] = 'form-control';
         }
-        foreach ($opts as $key => $value) 
-        {
+        foreach ($opts as $key => $value) {
             $h .= " $key=\"$value\"";
         }
+
         return $h;
-    } 
+    }
 
     abstract public function prepare($arguments);
 }
