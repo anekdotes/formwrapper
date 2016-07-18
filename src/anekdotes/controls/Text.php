@@ -32,6 +32,6 @@ class Text extends Control
         $html .= $this->getOpts($opts);
         $html .= '/>';
 
-        return $h;
+        return $html;
     }
 }
