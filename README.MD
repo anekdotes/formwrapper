@@ -1,12 +1,12 @@
 # Anekdotes Mailer 
 
-[![Latest Stable Version](https://poser.pugx.org/anekdotes/mailer/v/stable)](https://packagist.org/packages/anekdotes/mailer)
-[![Build Status](https://travis-ci.org/anekdotes/mailer.svg?branch=master)](https://travis-ci.org/anekdotes/mailer)
-[![codecov.io](https://codecov.io/github/anekdotes/mailer/coverage.svg)](https://codecov.io/github/anekdotes/mailer?branch=master)
-[![StyleCI](https://styleci.io/repos/62647499/shield?style=flat)](https://styleci.io/repos/62647499)
-[![License](https://poser.pugx.org/anekdotes/mailer/license)](https://packagist.org/packages/anekdotes/mailer)
-[![Total Downloads](https://poser.pugx.org/anekdotes/mailer/downloads)](https://packagist.org/packages/anekdotes/mailer)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/50134febcefe4cc78daf07ca45969728)](https://www.codacy.com/app/Grasseh/mailer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=anekdotes/mailer&amp;utm_campaign=Badge_Grade)
+[![Latest Stable Version](https://poser.pugx.org/anekdotes/formwrapper/v/stable)](https://packagist.org/packages/anekdotes/formwrapper)
+[![Build Status](https://travis-ci.org/anekdotes/formwrapper.svg?branch=master)](https://travis-ci.org/anekdotes/formwrapper)
+[![codecov.io](https://codecov.io/github/anekdotes/formwrapper/coverage.svg)](https://codecov.io/github/anekdotes/formwrapper?branch=master)
+[![StyleCI](https://styleci.io/repos/63632796/shield?style=flat)](https://styleci.io/repos/63632796)
+[![License](https://poser.pugx.org/anekdotes/formwrapper/license)](https://packagist.org/packages/anekdotes/formwrapper)
+[![Total Downloads](https://poser.pugx.org/anekdotes/formwrapper/downloads)](https://packagist.org/packages/anekdotes/formwrapper)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/be31cd80841d4af386c4b32df57597ce)](https://www.codacy.com/app/Grasseh/formwrapper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=anekdotes/formwrapper&amp;utm_campaign=Badge_Grade)
 
 Allows instantiation of custom form wrappers. Eases extandability of new wrappers. 
 
