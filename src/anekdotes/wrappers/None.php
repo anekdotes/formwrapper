@@ -17,5 +17,5 @@ class None
 {
     public function handle($title, $input){
         return $input;   
-    };
+    }
 }
