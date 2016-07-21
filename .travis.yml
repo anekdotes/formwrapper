@@ -17,5 +17,3 @@ after_script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
-env:
-  - CODACY_PROJECT_TOKEN=97060b07556e48639785581ebd59c7d8
