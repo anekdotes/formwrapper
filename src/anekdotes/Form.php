@@ -37,16 +37,17 @@ class Form
         return $wrap->handle($title, $prepared);
     }
 
-    private function obtainWrapperName($control, $arguments){
+    private function obtainWrapperName($control, $arguments)
+    {
         $currentWrapper = 'None';
         $wrapperNameSpace = 'Anekdotes\\FormWrapper\\Wrappers\\';
         $nbParams = $control->getNbParams();
-        //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1 
-        if($nbParams < count($arguments) - 1){
+        //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1
+        if ($nbParams < count($arguments) - 1) {
             end($arguments);
             $currentWrapper = current($arguments);
         }
-        return $wrapperNameSpace . $currentWrapper;
-    }
 
+        return $wrapperNameSpace.$currentWrapper;
+    }
 }
