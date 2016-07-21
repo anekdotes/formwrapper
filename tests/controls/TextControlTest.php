@@ -18,6 +18,6 @@ class TextControlTest extends PHPUnit_Framework_TestCase
     public function testTextPrepare()
     {
         $text = new Text();
-        $this->assertEquals($text->prepare(['test',['class' => 'toaster'],'default']), '<input type="text" name="test" value="default" class="toaster"/>');
+        $this->assertEquals($text->prepare(['test', ['class' => 'toaster'], 'default']), '<input type="text" name="test" value="default" class="toaster"/>');
     }
 }
