@@ -26,10 +26,11 @@ class Form
      */
     public function __call($name, $arguments)
     {
-        $args = array_slice($arguments, 1, count($arguments) - 1);
         $title = $arguments[0];
         $controlStr = 'Anekdotes\\FormWrapper\\Controls\\'.$name;
         $control = new $controlStr();
+        $slice = $control->getNbParams() < count($arguments) - 1 ? 0 : 1;
+        $args = array_slice($arguments, 1, count($arguments) - $slice);
         $prepared = $control->prepare($args);
         $wrapStr = $this->obtainWrapperName($control, $arguments);
         $wrap = new $wrapStr();
