@@ -15,4 +15,17 @@ Allows instantiation of custom form wrappers. Eases extandability of new wrapper
 Install via composer into your project:
 
     composer require anekdotes/formwrapper
+    
+## Basic Usage
 
+```
+<?php
+    $form = new Anekdotes\FormWrapper\Form;
+    echo($form->Text('label', 'toaster', ["class" => "form-stuff"], 'val'));
+?>
+```
+
+will output
+```
+    <input type="text" name="toaster" value="val class="form-stuff" />
+```    
