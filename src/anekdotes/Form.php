@@ -58,15 +58,15 @@ class Form
         if (!array_key_exists('class', $opts)) {
             $opts['class'] = 'form-horizontal';
         }
-        $h = "<form action=\"$url\" method=\"$realMethod\"";
+        $html = "<form action=\"$url\" method=\"$realMethod\"";
         $control = new Text();
-        $h .= $control->getOpts($opts);
-        $h .= '>';
+        $html .= $control->getOpts($opts);
+        $html .= '>';
         if ($method != 'get' && $method != 'post') {
-            $h .= '<input type="hidden" name="_method" value="'.$method.'" />'."\n";
+            $html .= '<input type="hidden" name="_method" value="'.$method.'" />'."\n";
         }
 
-        return $h;
+        return $html;
     }
 
     /**
@@ -76,9 +76,9 @@ class Form
      */
     public function close()
     {
-        $h = '</form>';
+        $html = '</form>';
 
-        return $h;
+        return $html;
     }
 
     private function obtainWrapperName($control, $arguments)
