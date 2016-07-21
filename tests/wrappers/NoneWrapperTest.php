@@ -18,6 +18,6 @@ class NoneWrapperTest extends PHPUnit_Framework_TestCase
     public function testNoneHandle()
     {
         $none = new None();
-        $this->assertEquals($none->handle('title','input'), 'input');
+        $this->assertEquals($none->handle('title', 'input'), 'input');
     }
 }
