@@ -29,3 +29,7 @@ will output
 ```
     <input type="text" name="toaster" value="val class="form-stuff" />
 ```    
+
+## Note
+
+Most of the wrappers use classes from Bootstrap.
