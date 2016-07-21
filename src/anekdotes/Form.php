@@ -42,12 +42,15 @@ class Form
 
     /**
      * Generates the opening of a form and wraps it.
-     * @param  string    $url    The url to send the action to.
-     * @param  string    $method The header request method to send the form (i.e. : GET,POST)
-     * @param  string[]  $opts   Contains the option="value" key-value pairs to be added to the form
-     * @return string            The wrapped HTML form.
+     *
+     * @param string   $url    The url to send the action to.
+     * @param string   $method The header request method to send the form (i.e. : GET,POST)
+     * @param string[] $opts   Contains the option="value" key-value pairs to be added to the form
+     *
+     * @return string The wrapped HTML form.
      */
-    public function open($url, $method, $opts = array()) {
+    public function open($url, $method, $opts = [])
+    {
         $realMethod = $method;
         if ($realMethod != 'get') {
             $realMethod = 'post';
@@ -60,17 +63,21 @@ class Form
         $h .= $control->getOpts($opts);
         $h .= '>';
         if ($method != 'get' && $method != 'post') {
-            $h .= '<input type="hidden" name="_method" value="' . $method . '" />' . "\n";
+            $h .= '<input type="hidden" name="_method" value="'.$method.'" />'."\n";
         }
+
         return $h;
     }
 
     /**
-     * Closes an HTML form
-     * @return string  The HTML closure.
+     * Closes an HTML form.
+     *
+     * @return string The HTML closure.
      */
-    public function close() {
+    public function close()
+    {
         $h = '</form>';
+
         return $h;
     }
 
