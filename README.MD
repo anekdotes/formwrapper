@@ -21,13 +21,17 @@ Install via composer into your project:
 ```
 <?php
     $form = new Anekdotes\FormWrapper\Form;
+    echo($form->open('www.toaster.com', post, ["class" => "form"]));
     echo($form->Text('label', 'toaster', ["class" => "form-stuff"], 'val'));
+    echo($form->close());
 ?>
 ```
 
 will output
 ```
+    <form action="www.toaster.com" method="form" class="form">
     <input type="text" name="toaster" value="val class="form-stuff" />
+    </form>
 ```    
 
 ## Note
