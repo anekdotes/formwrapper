@@ -33,7 +33,7 @@ class FormTest extends PHPUnit_Framework_TestCase
     {
         $form = new Form();
         $text = $form->open('www.test.test', 'put');
-        $expected = '<form action="www.test.test" method="post" class="form-horizontal"><input type="hidden" name="_method" value="put" />' . "\n";
+        $expected = '<form action="www.test.test" method="post" class="form-horizontal"><input type="hidden" name="_method" value="put" />'."\n";
         $this->assertEquals($text, $expected);
     }
 
