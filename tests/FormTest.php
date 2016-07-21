@@ -28,4 +28,12 @@ class FormTest extends PHPUnit_Framework_TestCase
         $text = $form->Text('toaster', 'toaster', [], 'default');
         $this->assertEquals($text, '<input type="text" name="toaster" value="default" class="form-control"/>');
     }
+
+    public function testFormOpen()
+    {
+        $form = new Form();
+        $text = $form->open('www.test.test', 'put');
+        $expected = '<form action="www.test.test" method="post" class="form-horizontal"><input type="hidden" name="_method" value="put" />' . "\n";
+        $this->assertEquals($text, $expected);
+    }
 }

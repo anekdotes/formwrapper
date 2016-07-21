@@ -10,6 +10,8 @@
 
 namespace Anekdotes\FormWrapper;
 
+use Anekdotes\FormWrapper\Controls\Text;
+
 /**
  * Controller class in charge of receiving calls and dispatching them.
  */
@@ -37,6 +39,32 @@ class Form
 
         return $wrap->handle($title, $prepared);
     }
+
+    /**
+     * Generates the opening of a form and wraps it.
+     * @param  string    $url    The url to send the action to.
+     * @param  string    $method The header request method to send the form (i.e. : GET,POST)
+     * @param  string[]  $opts   Contains the option="value" key-value pairs to be added to the form
+     * @return string            The wrapped HTML form.
+     */
+    public function open($url, $method, $opts = array()) {
+        $realMethod = $method;
+        if ($realMethod != 'get') {
+            $realMethod = 'post';
+        }
+        if (!array_key_exists('class', $opts)) {
+            $opts['class'] = 'form-horizontal';
+        }
+        $h = "<form action=\"$url\" method=\"$realMethod\"";
+        $control = new Text();
+        $h .= $control->getOpts($opts);
+        $h .= '>';
+        if ($method != 'get' && $method != 'post') {
+            $h .= '<input type="hidden" name="_method" value="' . $method . '" />' . "\n";
+        }
+        return $h;
+    }
+
 
     private function obtainWrapperName($control, $arguments)
     {
