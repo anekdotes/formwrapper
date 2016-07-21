@@ -36,4 +36,12 @@ class FormTest extends PHPUnit_Framework_TestCase
         $expected = '<form action="www.test.test" method="post" class="form-horizontal"><input type="hidden" name="_method" value="put" />' . "\n";
         $this->assertEquals($text, $expected);
     }
+
+    public function testFormClose()
+    {
+        $form = new Form();
+        $text = $form->close();
+        $expected = '</form>';
+        $this->assertEquals($text, $expected);
+    }
 }

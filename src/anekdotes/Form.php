@@ -65,6 +65,14 @@ class Form
         return $h;
     }
 
+    /**
+     * Closes an HTML form
+     * @return string  The HTML closure.
+     */
+    public function close() {
+        $h = '</form>';
+        return $h;
+    }
 
     private function obtainWrapperName($control, $arguments)
     {
