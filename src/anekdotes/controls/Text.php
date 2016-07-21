@@ -15,6 +15,7 @@ namespace Anekdotes\FormWrapper\Controls;
  */
 class Text extends Control
 {
+    protected $nbParams = 3;
     /**
      * Prepare the input.
      *

@@ -31,10 +31,22 @@ class Form
         $controlStr = 'Anekdotes\\FormWrapper\\Controls\\'.$name;
         $control = new $controlStr();
         $prepared = $control->prepare($args);
-        end($arguments);
-        $wrapStr = 'Anekdotes\\FormWrapper\\Wrappers\\'.current($arguments);
+        $wrapStr = $this->obtainWrapperName($control, $arguments);
         $wrap = new $wrapStr();
 
         return $wrap->handle($title, $prepared);
     }
+
+    private function obtainWrapperName($control, $arguments){
+        $currentWrapper = 'None';
+        $wrapperNameSpace = 'Anekdotes\\FormWrapper\\Wrappers\\';
+        $nbParams = $control->getNbParams();
+        //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1 
+        if($nbParams < count($arguments) - 1){
+            end($arguments);
+            $currentWrapper = current($arguments);
+        }
+        return $wrapperNameSpace . $currentWrapper;
+    }
+
 }

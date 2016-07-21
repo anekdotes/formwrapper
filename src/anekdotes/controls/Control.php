@@ -15,6 +15,8 @@ namespace Anekdotes\FormWrapper\Controls;
  */
 abstract class Control
 {
+    protected $nbParams = 0;
+  
     /**
      * Generates the option + values in the provided field. Ex : id="name".
      *
@@ -33,6 +35,10 @@ abstract class Control
         }
 
         return $html;
+    }
+
+    public function getNbParams(){
+        return $this->nbParams;
     }
 
     abstract public function prepare($arguments);
