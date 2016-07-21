@@ -34,6 +34,51 @@ will output
     </form>
 ```    
 
+## Extending Controls and Wrappers
+
+It is possible to write your own controls and wrappers and use them.
+
+```
+    namespace MyCustomWrapper;
+
+    use Anekdotes\FormWrapper\Wrappers\Wrapper;
+
+    class MyWrapper extends Wrapper
+    {
+        public function handle($title, $fields)
+        {
+            return '<div class="MyCustomLabel">'.$title.'</div><div>'.$fields.'</div>';
+        }
+    }
+```
+
+```
+    namespace MyCustomControl;
+
+    use Anekdotes\FormWrapper\Controls\Control;
+
+    class MyControl extends Control
+    {
+        protected $nbParams = 1;
+
+        public function prepare($arguments)
+        {
+            $name = $arguments[0];
+            return '<input type="text" value="'.$name.'" name="'.$name.'"/>';
+        }
+    }
+```
+
+```
+
+    $form = new Anekdotes\FormWrapper\Form;
+    $form->wrappersNamespace = 'MyCustomWrapper';
+    $form->controlsNamespace = 'MyCustomControl';
+    echo($form->open('www.toaster.com', post, ["class" => "form"]));
+    echo($form->MyControl('toaster', 'toaster', 'MyWrapper'));
+    echo($form->close());
+
+```
 ## Note
 
 Most of the wrappers use classes from Bootstrap.
