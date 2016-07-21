@@ -17,6 +17,16 @@ use Anekdotes\FormWrapper\Controls\Text;
  */
 class Form
 {
+    
+    public $controlsNamespace;
+    public $wrappersNamespace;
+
+    public function __construct($controls = '', $wrappers = '')
+    {
+        $this->controlsNamespace = $controls == '' ? 'Anekdotes\\FormWrapper\\Controls\\' : $controls;
+        $this->wrappersNamespace = $wrappers == '' ? 'Anekdotes\\FormWrapper\\Wrappers\\' : $wrappers;
+    }
+
     /**
      * Calls the desired control, prepare it and pass it to a wrapper.
      *
@@ -29,7 +39,7 @@ class Form
     public function __call($name, $arguments)
     {
         $title = $arguments[0];
-        $controlStr = 'Anekdotes\\FormWrapper\\Controls\\'.$name;
+        $controlStr = $this->controlsNamespace.$name;
         $control = new $controlStr();
         $slice = $control->getNbParams() < count($arguments) - 1 ? 0 : 1;
         $args = array_slice($arguments, 1, count($arguments) - $slice);
@@ -84,7 +94,7 @@ class Form
     private function obtainWrapperName($control, $arguments)
     {
         $currentWrapper = 'None';
-        $wrapperNameSpace = 'Anekdotes\\FormWrapper\\Wrappers\\';
+        $wrapperNameSpace = $this->wrappersNamespace;
         $nbParams = $control->getNbParams();
         //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1
         if ($nbParams < count($arguments) - 1) {
