@@ -1,4 +1,4 @@
-# Anekdotes Mailer 
+# Anekdotes Form Wrapper 
 
 [![Latest Stable Version](https://poser.pugx.org/anekdotes/formwrapper/v/stable)](https://packagist.org/packages/anekdotes/formwrapper)
 [![Build Status](https://travis-ci.org/anekdotes/formwrapper.svg?branch=master)](https://travis-ci.org/anekdotes/formwrapper)
