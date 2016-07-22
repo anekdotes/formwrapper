@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the Logger package.
+ * This file is part of the Form Wrapper package.
  *
  * (c) Anekdotes Communication inc. <info@anekdotes.com>
  *
