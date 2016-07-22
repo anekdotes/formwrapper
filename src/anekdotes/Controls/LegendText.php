@@ -33,8 +33,8 @@ class LegendText extends Control
         $value = $arguments[2];
         $legend = $arguments[3];
         $html = '<div class="input-group">';
-        if($legend != ''){
-          $html .= '<span class="input-group-addon">'.$legend.'</span>';
+        if ($legend != '') {
+            $html .= '<span class="input-group-addon">'.$legend.'</span>';
         }
         $html .= '<input type="text" name="'.$name.'" value="'.$value.'"';
         $html .= $this->getOpts($opts);
