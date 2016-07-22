@@ -11,11 +11,11 @@
 namespace Anekdotes\FormWrapper\Controls;
 
 /**
- * Wraps a basic input text.
+ * Generates a text area.
  */
-class LegendText extends Control
+class Textarea extends Control
 {
-    protected $nbParams = 4;
+    protected $nbParams = 3;
 
     /**
      * Prepare the input.
@@ -24,21 +24,15 @@ class LegendText extends Control
      *                         [0]  string    $name   Field's name, to be used by the form as a key.
      *                         [1]  string[]  $opts   Contains the option="value" key-value pairs to be added to the field
      *                         [2]  string    $value  Contains the field's default value.
-     *                         [3]  string    $legend Text to put in the legend
      */
     public function prepare($arguments)
     {
         $name = $arguments[0];
         $opts = $arguments[1];
         $value = $arguments[2];
-        $legend = $arguments[3];
-        $html = '<div class="input-group">';
-        if ($legend != '') {
-            $html .= '<span class="input-group-addon">'.$legend.'</span>';
-        }
-        $html .= '<input type="text" name="'.$name.'" value="'.$value.'"';
+        $html = '<textarea name="'.$name.'" ';
         $html .= $this->getOpts($opts);
-        $html .= '/></div>';
+        $html .= '>'.$value.'</textarea>';
 
         return $html;
     }
