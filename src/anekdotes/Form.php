@@ -17,7 +17,6 @@ use Anekdotes\FormWrapper\Controls\Text;
  */
 class Form
 {
-    
     public $controlsNamespace;
     public $wrappersNamespace;
 
