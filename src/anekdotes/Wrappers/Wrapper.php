@@ -15,5 +15,5 @@ namespace Anekdotes\FormWrapper\Wrappers;
  */
 abstract class Wrapper
 {
-    abstract public function handle($title, $input);
+    abstract public function handle($input, $title = '');
 }

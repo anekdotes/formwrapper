@@ -46,7 +46,7 @@ class Form
         $wrapStr = $this->obtainWrapperName($control, $arguments);
         $wrap = new $wrapStr();
 
-        return $wrap->handle($title, $prepared);
+        return $wrap->handle($prepared, $title);
     }
 
     /**

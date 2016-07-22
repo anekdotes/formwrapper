@@ -19,6 +19,6 @@ class WrapWrapperTest extends PHPUnit_Framework_TestCase
     {
         $wrap = new Wrap();
         $expected = '<div class="row form-row"><label class="col col-lg-4 form-label">title</label><div class="col col-lg-8">input</div><div class="clearfix"></div></div>'."\n";
-        $this->assertEquals($wrap->handle('title', 'input'), $expected);
+        $this->assertEquals($wrap->handle('input', 'title'), $expected);
     }
 }

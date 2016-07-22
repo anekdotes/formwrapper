@@ -15,7 +15,7 @@ namespace Anekdotes\FormWrapper\Wrappers;
  */
 class Wrap
 {
-    public function handle($title, $input)
+    public function handle($input, $title)
     {
         return  '<div class="row form-row">'.
                     '<label class="col col-lg-4 form-label">'.$title.'</label>'.

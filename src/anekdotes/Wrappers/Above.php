@@ -15,7 +15,7 @@ namespace Anekdotes\FormWrapper\Wrappers;
  */
 class Above
 {
-    public function handle($title, $input)
+    public function handle($input, $title)
     {
         return  '<div class="row form-row">'.
                     '<div class="col-lg-12"><label>'.$title.'</label></div>'.

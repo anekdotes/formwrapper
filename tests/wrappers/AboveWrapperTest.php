@@ -19,6 +19,6 @@ class AboveWrapperTest extends PHPUnit_Framework_TestCase
     {
         $above = new Above();
         $expected = '<div class="row form-row"><div class="col-lg-12"><label>title</label></div><div class="col-lg-12">input</div><div class="clearfix"></div></div>'."\n";
-        $this->assertEquals($above->handle('title', 'input'), $expected);
+        $this->assertEquals($above->handle('input', 'title'), $expected);
     }
 }
