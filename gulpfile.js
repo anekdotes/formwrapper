@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 // =======================================================================================
 // =======================================================================================
@@ -35,7 +34,7 @@ gulp.task('css', function() {
   .pipe(sass())
   .pipe(concat('Form.css'))
   .pipe(minifyCSS({
-    keepBreaks:true
+    'keepBreaks':true
   }))
   .pipe(gulp.dest('./src/anekdotes/assets/min/'));
 });
