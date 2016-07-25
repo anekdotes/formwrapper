@@ -34,8 +34,8 @@ class Checkbox extends Control
         $checked = $arguments[3];
         $html = '<input type="checkbox" ';
         $html .= $checked ? 'checked ' : '';
-        $html .= 'name="' . $name . '" ';
-        $html .= 'value="' . $key . '" ';
+        $html .= 'name="'.$name.'" ';
+        $html .= 'value="'.$key.'" ';
         $html .= $this->getOpts($opts);
         $html .= '>';
 
