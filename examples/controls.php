@@ -16,6 +16,7 @@
     echo $form->Number('# of toasters owned', 'toasters', ['class' => 'form-stuff'], '4', 'Wrap');
     echo $form->Password('Not a secret?', 'secret', ['class' => 'form-stuff'], 'toast', 'Wrap');
     echo $form->Textarea('Others?', 'others', ['class' => 'form-stuff'], 'Filler', 'Wrap');
+    echo $form->Checkbox('Active', 'active', '1', ['class' => 'form-stuff'], 'true', 'Wrap');
     echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
     echo $form->close();
 ?>
