@@ -24,7 +24,7 @@
     ];
     echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
     echo $form->Radio('FM', 'fm', '1', ['class' => 'form-stuff'], false, 'Wrap');
-
+    echo $form->RadioGroup('Best condiment', 'condiment', $Objects, ['class' => 'form-stuff'], [1], 'Wrap');
 
     echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
     echo $form->close();
