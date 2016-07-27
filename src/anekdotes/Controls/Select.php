@@ -40,7 +40,7 @@ class Select extends Control
         $hKey = Arr::get($opts, 'key', 'id');
         $hValue = Arr::get($opts, 'value', 'name');
         $html = '<select name="'.$name.'" '.$this->getOpts($opts).'>';
-        if($placeholder != ''){
+        if ($placeholder != '') {
             $option = new Option();
             $html .= $option->prepare([$placeholder, '', ['class' => 'form-option'], false]);
         }
