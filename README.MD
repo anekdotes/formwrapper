@@ -34,6 +34,8 @@ will output
     </form>
 ```    
 
+All built-in Controls and Wrappers can be found in the folder ```examples```
+
 ## Extending Controls and Wrappers
 
 It is possible to write your own controls and wrappers and use them.
