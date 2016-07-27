@@ -85,7 +85,7 @@ It is possible to write your own controls and wrappers and use them.
 
 Pull requests are welcome. Note that if you want to develop the scss files, you will need to install npm dependencies using `npm install`. You will then need to use `gulp` to compile the CSS.
 
-Pull requests must have tests included (expected for the scss). If no tests are to be found, if the pull request does not pass the current test suite or if the tests do not cover enough cases, the pull requests may not be merged. 
+Pull requests must have tests included (excepted for the scss). If no tests are to be found, if the pull request does not pass the current test suite or if the tests do not cover enough cases, the pull requests may not be merged. 
 
 ## Note
 
