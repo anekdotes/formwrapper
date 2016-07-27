@@ -24,7 +24,7 @@ class CheckboxGroup extends Control
      *
      * @param array $arguments Contains the passed arguments
      *                         [0]  string    $name      Checkbox group's name.
-     *                         [1]  Array[]   $elements  Array of checkbox elements. These must be PHP Arrays which all contain the ["id"] and ["name"] attributes (unless either "key" or "value" are redefined in the opts)  
+     *                         [1]  Array[]   $elements  Array of checkbox elements. These must be PHP Arrays which all contain the ["id"] and ["name"] attributes (unless either "key" or "value" are redefined in the opts)
      *                         [2]  string[]  $opts      Contains the option="value" key-value pairs to be added to the field
      *                         [3]  Array[]   $values    Contains the elements that need to be checked (an is in array comparison is made)
      */
