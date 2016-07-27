@@ -11,7 +11,7 @@
 namespace Anekdotes\FormWrapper\Wrappers;
 
 /**
- * Generates a form wrap around the provided fields,
+ * Generates a form wrap around the provided fields.
  */
 class Small
 {
