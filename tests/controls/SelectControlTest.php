@@ -18,7 +18,7 @@ class SelectControlTest extends PHPUnit_Framework_TestCase
     public function testSelectPrepare()
     {
         $control = new Select();
-        $expected = '<select name="group"  class="toaster"><option value="1" selected="selected" class="form-option">toaster</option><option value="2" class="form-option">active</option><option value="3" class="form-option">help</option></select>';
+        $expected = '<select name="group"  class="toaster"><option value="" class="form-option">PlaceHolder</option><option value="1" selected="selected" class="form-option">toaster</option><option value="2" class="form-option">active</option><option value="3" class="form-option">help</option></select>';
         $opts = [
             'group',
             [
@@ -30,6 +30,7 @@ class SelectControlTest extends PHPUnit_Framework_TestCase
             [
                 1,
             ],
+            'PlaceHolder'
         ];
         $this->assertEquals($control->prepare($opts), $expected);
     }

@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="/../src/anekdotes/assets/min/Form.css">
 </head>
 <body>
-    <h1> Controls </h1>
     <div class="row">
         <div class="col-lg-6">
+            <h1> Controls </h1>
         <?php
             require __DIR__.'/../vendor/autoload.php';
             $form = new \Anekdotes\FormWrapper\Form();
@@ -27,8 +27,9 @@
             echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
             echo $form->Radio('FM', 'fm', '1', ['class' => 'form-stuff'], false, 'Wrap');
             echo $form->RadioGroup('Best condiment', 'condiment', $Objects, ['class' => 'form-stuff'], [1], 'Wrap');
-            echo $form->Select('Select a condiment', 'selCond', $Objects, ['class' => 'form-control'], [1], 'Wrap');
-
+            echo $form->Select('Select a condiment', 'selCond', $Objects, ['class' => 'form-control'], [2], '', 'Wrap');
+            echo $form->Select('Select a placeholder', 'selCond', $Objects, ['class' => 'form-control'], '', 'Placeholder', 'Wrap');
+            
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
             echo $form->close();
         ?>

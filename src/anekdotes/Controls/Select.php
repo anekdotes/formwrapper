@@ -17,16 +17,17 @@ use Anekdotes\Support\Arr;
  */
 class Select extends Control
 {
-    protected $nbParams = 4;
+    protected $nbParams = 5;
 
     /**
      * Prepare the input.
      *
      * @param array $arguments Contains the passed arguments
-     *                         [0]  string    $name      Checkbox group's name.
-     *                         [1]  Array[]   $elements  Array of checkbox elements. These must be PHP Arrays which all contain the ["id"] and ["name"] attributes (unless either "key" or "value" are redefined in the opts)
-     *                         [2]  string[]  $opts      Contains the option="value" key-value pairs to be added to the field
-     *                         [3]  integer   $values    Contains the default selected element
+     *                         [0]  string    $name         Checkbox group's name.
+     *                         [1]  Array[]   $elements     Array of checkbox elements. These must be PHP Arrays which all contain the ["id"] and ["name"] attributes (unless either "key" or "value" are redefined in the opts)
+     *                         [2]  string[]  $opts         Contains the option="value" key-value pairs to be added to the field
+     *                         [3]  integer   $values       Contains the default selected element
+     *                         [4]  string    $placeholder  Contains a string representing the Placeholder value at the top of the select. '' if none
      */
     public function prepare($arguments)
     {
@@ -34,10 +35,15 @@ class Select extends Control
         $elements = $arguments[1];
         $opts = $arguments[2];
         $values = $arguments[3];
+        $placeholder = $arguments[4];
         $values = (array) $values;
         $hKey = Arr::get($opts, 'key', 'id');
         $hValue = Arr::get($opts, 'value', 'name');
         $html = '<select name="'.$name.'" '.$this->getOpts($opts).'>';
+        if($placeholder != ''){
+            $option = new Option();
+            $html .= $option->prepare([$placeholder, '', ['class' => 'form-option'], false]);
+        }
         foreach ($elements as $element) {
             $option = new Option();
             $html .= $option->prepare([$element[$hValue], $element[$hKey], ['class' => 'form-option'], in_array($element[$hKey], $values)]);
