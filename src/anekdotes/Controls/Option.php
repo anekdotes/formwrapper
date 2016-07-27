@@ -11,7 +11,7 @@
 namespace Anekdotes\FormWrapper\Controls;
 
 /**
- * Wraps a basic option field. Probably should only be used without wrap to be honest
+ * Wraps a basic option field. Probably should only be used without wrap to be honest.
  */
 class Option extends Control
 {
@@ -33,7 +33,7 @@ class Option extends Control
         $opts = $arguments[2];
         $checked = $arguments[3];
         $html = '<option value="'.$key.'"';
-        if ($checked){
+        if ($checked) {
             $html .= ' selected="selected"';
         }
         $html .= $this->getOpts($opts);
