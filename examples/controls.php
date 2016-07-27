@@ -18,11 +18,11 @@
     echo $form->Textarea('Others?', 'others', ['class' => 'form-stuff'], 'Filler', 'Wrap');
     echo $form->Checkbox('Active', 'active', '1', ['class' => 'form-stuff'], 'true', 'Wrap');
     $Objects = [
-        ['id' => 1, 'name' => 'Ketchup'],  
-        ['id' => 3, 'name' => 'Mustard'],  
-        ['id' => 7, 'name' => 'Jelly'],  
+        ['id' => 1, 'name' => 'Ketchup'],
+        ['id' => 3, 'name' => 'Mustard'],
+        ['id' => 7, 'name' => 'Jelly'],
     ];
-    echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1,7], 'Wrap');
+    echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
 
 
 
