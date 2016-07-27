@@ -16,14 +16,14 @@
     echo $form->Number('# of toasters owned', 'toasters', ['class' => 'form-stuff'], '4', 'Wrap');
     echo $form->Password('Not a secret?', 'secret', ['class' => 'form-stuff'], 'toast', 'Wrap');
     echo $form->Textarea('Others?', 'others', ['class' => 'form-stuff'], 'Filler', 'Wrap');
-    echo $form->Checkbox('Active', 'active', '1', ['class' => 'form-stuff'], 'true', 'Wrap');
+    echo $form->Checkbox('Active', 'active', '1', ['class' => 'form-stuff'], true, 'Wrap');
     $Objects = [
         ['id' => 1, 'name' => 'Ketchup'],
         ['id' => 3, 'name' => 'Mustard'],
         ['id' => 7, 'name' => 'Jelly'],
     ];
     echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
-
+    echo $form->Radio('FM', 'fm', '1', ['class' => 'form-stuff'], false, 'Wrap');
 
 
     echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
