@@ -10,15 +10,15 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Wrappers\SingleSix;
+use Anekdotes\FormWrapper\Wrappers\SingleFour;
 use PHPUnit_Framework_TestCase;
 
-class SingleSixWrapperTest extends PHPUnit_Framework_TestCase
+class SingleFourWrapperTest extends PHPUnit_Framework_TestCase
 {
-    public function testSingleSixHandle()
+    public function testSingleFourHandle()
     {
-        $wrap = new SingleSix();
-        $expected = '<div class="col col-lg-6">input</div>';
+        $wrap = new SingleFour();
+        $expected = '<div class="col col-lg-4">input</div>';
         $this->assertEquals($wrap->handle('input', 'title'), $expected);
     }
 }
