@@ -30,7 +30,7 @@ class SelectControlTest extends PHPUnit_Framework_TestCase
             [
                 1,
             ],
-            'PlaceHolder'
+            'PlaceHolder',
         ];
         $this->assertEquals($control->prepare($opts), $expected);
     }
