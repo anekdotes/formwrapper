@@ -30,6 +30,8 @@
             echo $form->Select('Select a condiment', 'selCond', $Objects, ['class' => 'form-control'], [2], '', 'Wrap');
             echo $form->Select('Select a placeholder', 'selCond', $Objects, ['class' => 'form-control'], '', 'Placeholder', 'Wrap');
             echo $form->Label('', 'Label', ['class' => 'form-label'], 'Wrap');
+            echo $form->YesNo('Do you?', 'yesno1', ['class' => 'form-label'], true, 'Wrap');
+            echo $form->YesNo('Faites-vous?', 'yesno2', ['class' => 'form-label', "yes" => "si", "no" => "nicht"], false, 'Wrap');
 
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
             echo $form->close();
