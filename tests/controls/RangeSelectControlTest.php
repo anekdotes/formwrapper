@@ -22,10 +22,10 @@ class RangeSelectControlTest extends PHPUnit_Framework_TestCase
         $opts = [
             'name',
             [
-                'class' => 'form',
-                'step' => 1,
-                'start' => 1,
-                'end' => 10,
+                'class'    => 'form',
+                'step'     => 1,
+                'start'    => 1,
+                'end'      => 10,
                 'inverted' => false,
             ],
             5,
@@ -40,10 +40,10 @@ class RangeSelectControlTest extends PHPUnit_Framework_TestCase
         $opts = [
             'name',
             [
-                'class' => 'form',
-                'step' => 1,
-                'start' => 1,
-                'end' => 10,
+                'class'    => 'form',
+                'step'     => 1,
+                'start'    => 1,
+                'end'      => 10,
                 'inverted' => true,
             ],
             5,
