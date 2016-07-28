@@ -39,6 +39,8 @@ class Select extends Control
         $values = (array) $values;
         $hKey = Arr::get($opts, 'key', 'id');
         $hValue = Arr::get($opts, 'value', 'name');
+        Arr::remove('key', $opts);
+        Arr::remove('value', $opts);
         $html = '<select name="'.$name.'" '.$this->getOpts($opts).'>';
         if ($placeholder != '') {
             $option = new Option();

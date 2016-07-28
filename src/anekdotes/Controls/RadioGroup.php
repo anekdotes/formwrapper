@@ -37,6 +37,8 @@ class RadioGroup extends Control
         $values = (array) $values;
         $hKey = Arr::get($opts, 'key', 'id');
         $hValue = Arr::get($opts, 'value', 'name');
+        Arr::remove('key', $opts);
+        Arr::remove('value', $opts);
         $html = '';
         foreach ($elements as $element) {
             $html .= '<div class="radio">';
