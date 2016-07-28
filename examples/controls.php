@@ -29,6 +29,7 @@
             echo $form->RadioGroup('Best condiment', 'condiment', $Objects, ['class' => 'form-stuff'], [1], 'Wrap');
             echo $form->Select('Select a condiment', 'selCond', $Objects, ['class' => 'form-control'], [2], '', 'Wrap');
             echo $form->Select('Select a placeholder', 'selCond', $Objects, ['class' => 'form-control'], '', 'Placeholder', 'Wrap');
+            echo $form->Label('', 'Label', ['class' => 'form-label'], 'Wrap');
 
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
             echo $form->close();
