@@ -21,4 +21,11 @@ class LegendTextControlTest extends PHPUnit_Framework_TestCase
         $expected = '<div class="input-group"><span class="input-group-addon">legend</span><input type="text" name="test" value="default" class="toaster"/></div>';
         $this->assertEquals($text->prepare(['test', ['class' => 'toaster'], 'default', 'legend']), $expected);
     }
+
+    public function testLegendTextPrepareRight()
+    {
+        $text = new LegendText();
+        $expected = '<div class="input-group"><input type="text" name="test" value="default" class="toaster"/><span class="input-group-addon">legend</span></div>';
+        $this->assertEquals($text->prepare(['test', ['class' => 'toaster', 'position' => 'right'], 'default', 'legend']), $expected);
+    }
 }
