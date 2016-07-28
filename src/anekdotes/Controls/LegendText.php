@@ -10,6 +10,8 @@
 
 namespace Anekdotes\FormWrapper\Controls;
 
+use Anekdotes\Support\Arr;
+
 /**
  * Wraps a basic input text.
  */
@@ -32,13 +34,19 @@ class LegendText extends Control
         $opts = $arguments[1];
         $value = $arguments[2];
         $legend = $arguments[3];
+        $positionRight = Arr::get($opts, 'position', 'left') == 'right';
+        Arr::remove('position', $opts);
         $html = '<div class="input-group">';
-        if ($legend != '') {
+        if (!$positionRight) {
             $html .= '<span class="input-group-addon">'.$legend.'</span>';
         }
         $html .= '<input type="text" name="'.$name.'" value="'.$value.'"';
         $html .= $this->getOpts($opts);
-        $html .= '/></div>';
+        $html .= '/>';
+        if ($positionRight) {
+            $html .= '<span class="input-group-addon">'.$legend.'</span>';
+        }
+        $html .= '</div>';
 
         return $html;
     }

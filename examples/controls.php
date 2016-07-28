@@ -33,6 +33,7 @@
             echo $form->YesNo('Do you?', 'yesno1', ['class' => 'form-label'], true, 'Wrap');
             echo $form->YesNo('Faites-vous?', 'yesno2', ['class' => 'form-label', 'yes' => 'si', 'no' => 'nicht'], false, 'Wrap');
             echo $form->LegendText('You are', 'legend', ['class' => 'form-control'], 'legend', 'a', 'Wrap');
+            echo $form->LegendText('You are', 'legend', ['class' => 'form-control', 'position' => 'right'], 'a', 'legend', 'Wrap');
             echo $form->Money('Price', 'price', ['class' => 'form-control'], '12.00', 'Wrap');
 
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
