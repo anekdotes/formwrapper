@@ -35,6 +35,8 @@
             echo $form->LegendText('You are', 'legend', ['class' => 'form-control'], 'legend', 'a', 'Wrap');
             echo $form->LegendText('You are', 'legend', ['class' => 'form-control', 'position' => 'right'], 'a', 'legend', 'Wrap');
             echo $form->Money('Price', 'price', ['class' => 'form-control'], '12.00', 'Wrap');
+            echo $form->RangeSelect('Selection', 'range', ['class' => 'form-control', 'start' => 5, 'end' => 100, 'step' => 5], 20, 'Wrap');
+            echo $form->RangeSelect('Noitceles', 'egnar', ['class' => 'form-control', 'start' => 2, 'end' => 20, 'step' => 2, 'inverted' => true], 4, 'Wrap');
 
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
             echo $form->close();
