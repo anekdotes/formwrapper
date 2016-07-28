@@ -33,23 +33,28 @@ class RangeSelect extends Control
         $opts = $arguments[1];
         $default = $arguments[2];
 
-        $start = Arr::get($opts, 'start', 1); 
-        $end = Arr::get($opts, 'end', 10); 
-        $step = Arr::get($opts, 'step', 1); 
-        $inverted = Arr::get($opts, 'inverted', false); 
+        $start = Arr::get($opts, 'start', 1);
+        $end = Arr::get($opts, 'end', 10);
+        $step = Arr::get($opts, 'step', 1);
+        $inverted = Arr::get($opts, 'inverted', false);
         Arr::remove('start', $opts);
         Arr::remove('end', $opts);
         Arr::remove('step', $opts);
         Arr::remove('inverted', $opts);
         $opts['value'] = 0;
         $opts['key'] = 0;
-        $values = array();
+        $values = [];
         if ($inverted) {
-          for ($i=$end; $i >= $start; $i -= $step) { $values[] = array($i); }
+            for ($i = $end; $i >= $start; $i -= $step) {
+                $values[] = [$i];
+            }
         } else {
-          for ($i=$start; $i <= $end; $i += $step) { $values[] = array($i); }
+            for ($i = $start; $i <= $end; $i += $step) {
+                $values[] = [$i];
+            }
         }
         $select = new Select();
+
         return $select->prepare([$name, $values, $opts, [$default], '']);
     }
 }
