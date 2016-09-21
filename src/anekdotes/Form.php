@@ -40,7 +40,7 @@ class Form
         $title = $arguments[0];
         $controlStr = $this->controlsNamespace.$name;
         if (!class_exists($controlStr)){
-          $controlStr = $this->controlsNamespace.ucfirst($name);
+            $controlStr = $this->controlsNamespace.ucfirst($name);
         }
         $control = new $controlStr();
         $slice = $control->getNbParams() < count($arguments) - 1 ? 0 : 1;
