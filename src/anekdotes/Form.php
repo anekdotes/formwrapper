@@ -39,7 +39,7 @@ class Form
     {
         $title = $arguments[0];
         $controlStr = $this->controlsNamespace.$name;
-        if (!class_exists($controlStr)){
+        if (!class_exists($controlStr)) {
             $controlStr = $this->controlsNamespace.ucfirst($name);
         }
         $control = new $controlStr();
