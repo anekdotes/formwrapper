@@ -15,6 +15,13 @@ use PHPUnit_Framework_TestCase;
 
 class FormTest extends PHPUnit_Framework_TestCase
 {
+    public function testCaseSensitivity()
+    {
+        $form = new Form();
+        $text = $form->text('toaster', 'toaster', [], 'default', 'None');
+        $this->assertEquals($text, '<input type="text" name="toaster" value="default" class="form-control"/>');
+    }
+
     public function testIntegrationForm()
     {
         $form = new Form();

@@ -31,7 +31,7 @@ class Label extends Control
         $html = '<label ';
         $html .= $this->getOpts($opts);
         $html .= '>';
-        $html .=  $name;
+        $html .= $name;
         $html .= '</label>';
 
         return $html;
