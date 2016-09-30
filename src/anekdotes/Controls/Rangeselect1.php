@@ -15,7 +15,7 @@ use Anekdotes\Support\Arr;
 /**
  * Wraps a range in a select.
  */
-class RangeSelect extends Control
+class Rangeselect extends Control
 {
     protected $nbParams = 3;
 

@@ -15,7 +15,7 @@ use Anekdotes\Support\Arr;
 /**
  * Wraps a group of checkboxes.
  */
-class CheckboxGroup extends Control
+class Checkboxgroup extends Control
 {
     protected $nbParams = 4;
 

@@ -15,7 +15,7 @@ use Anekdotes\Support\Arr;
 /**
  * Wraps a group of radio buttons.
  */
-class RadioGroup extends Control
+class Radiogroup extends Control
 {
     protected $nbParams = 4;
 

@@ -15,7 +15,7 @@ use Anekdotes\Support\Arr;
 /**
  * Wraps two radio buttons in a group.
  */
-class YesNo extends Control
+class Yesno extends Control
 {
     protected $nbParams = 3;
 

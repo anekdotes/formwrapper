@@ -15,7 +15,7 @@ use Anekdotes\Support\Arr;
 /**
  * Wraps a basic input text.
  */
-class LegendText extends Control
+class Legendtext extends Control
 {
     protected $nbParams = 4;
 
