@@ -10,14 +10,14 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\CheckboxGroup;
+use Anekdotes\FormWrapper\Controls\Checkboxgroup;
 use PHPUnit_Framework_TestCase;
 
-class CheckboxGroupControlTest extends PHPUnit_Framework_TestCase
+class CheckboxgroupControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testCheckboxGroupPrepare()
+    public function testCheckboxgroupPrepare()
     {
-        $control = new CheckboxGroup();
+        $control = new Checkboxgroup();
         $expected = '<div class="checkbox"><label>toaster<input type="checkbox" checked name="group" value="1"  class="toaster"></div></label><div class="checkbox"><label>active<input type="checkbox" name="group" value="2"  class="toaster"></div></label><div class="checkbox"><label>help<input type="checkbox" checked name="group" value="3"  class="toaster"></div></label>';
         $opts = [
             'group',

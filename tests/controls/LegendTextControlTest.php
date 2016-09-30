@@ -10,21 +10,21 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\LegendText;
+use Anekdotes\FormWrapper\Controls\Legendtext;
 use PHPUnit_Framework_TestCase;
 
-class LegendTextControlTest extends PHPUnit_Framework_TestCase
+class LegendtextControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testLegendTextPrepare()
+    public function testLegendtextPrepare()
     {
-        $text = new LegendText();
+        $text = new Legendtext();
         $expected = '<div class="input-group"><span class="input-group-addon">legend</span><input type="text" name="test" value="default" class="toaster"/></div>';
         $this->assertEquals($text->prepare(['test', ['class' => 'toaster'], 'default', 'legend']), $expected);
     }
 
-    public function testLegendTextPrepareRight()
+    public function testLegendtextPrepareRight()
     {
-        $text = new LegendText();
+        $text = new Legendtext();
         $expected = '<div class="input-group"><input type="text" name="test" value="default" class="toaster"/><span class="input-group-addon">legend</span></div>';
         $this->assertEquals($text->prepare(['test', ['class' => 'toaster', 'position' => 'right'], 'default', 'legend']), $expected);
     }

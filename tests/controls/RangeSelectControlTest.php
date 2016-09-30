@@ -10,14 +10,14 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\RangeSelect;
+use Anekdotes\FormWrapper\Controls\Rangeselect;
 use PHPUnit_Framework_TestCase;
 
-class RangeSelectControlTest extends PHPUnit_Framework_TestCase
+class RangeselectControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testRangeSelectPrepare()
+    public function testRangeselectPrepare()
     {
-        $control = new RangeSelect();
+        $control = new Rangeselect();
         $expected = '<select name="name"  class="form"><option value="1" class="form-option">1</option><option value="2" class="form-option">2</option><option value="3" class="form-option">3</option><option value="4" class="form-option">4</option><option value="5" selected="selected" class="form-option">5</option><option value="6" class="form-option">6</option><option value="7" class="form-option">7</option><option value="8" class="form-option">8</option><option value="9" class="form-option">9</option><option value="10" class="form-option">10</option></select>';
         $opts = [
             'name',
@@ -33,9 +33,9 @@ class RangeSelectControlTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($control->prepare($opts), $expected);
     }
 
-    public function testRangeSelectPrepareInverted()
+    public function testRangeselectPrepareInverted()
     {
-        $control = new RangeSelect();
+        $control = new Rangeselect();
         $expected = '<select name="name"  class="form"><option value="10" class="form-option">10</option><option value="9" class="form-option">9</option><option value="8" class="form-option">8</option><option value="7" class="form-option">7</option><option value="6" class="form-option">6</option><option value="5" selected="selected" class="form-option">5</option><option value="4" class="form-option">4</option><option value="3" class="form-option">3</option><option value="2" class="form-option">2</option><option value="1" class="form-option">1</option></select>';
         $opts = [
             'name',

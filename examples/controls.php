@@ -24,19 +24,19 @@
                 ['id' => 3, 'name' => 'Mustard'],
                 ['id' => 7, 'name' => 'Jelly'],
             ];
-            echo $form->CheckboxGroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
+            echo $form->Checkboxgroup('Options', 'options', $Objects, ['class' => 'form-stuff'], [1, 7], 'Wrap');
             echo $form->Radio('FM', 'fm', '1', ['class' => 'form-stuff'], false, 'Wrap');
-            echo $form->RadioGroup('Best condiment', 'condiment', $Objects, ['class' => 'form-stuff'], [1], 'Wrap');
+            echo $form->Radiogroup('Best condiment', 'condiment', $Objects, ['class' => 'form-stuff'], [1], 'Wrap');
             echo $form->Select('Select a condiment', 'selCond', $Objects, ['class' => 'form-control'], [2], '', 'Wrap');
             echo $form->Select('Select a placeholder', 'selCond', $Objects, ['class' => 'form-control'], '', 'Placeholder', 'Wrap');
             echo $form->Label('', 'Label', ['class' => 'form-label'], 'Wrap');
-            echo $form->YesNo('Do you?', 'yesno1', ['class' => 'form-label'], true, 'Wrap');
-            echo $form->YesNo('Faites-vous?', 'yesno2', ['class' => 'form-label', 'yes' => 'si', 'no' => 'nicht'], false, 'Wrap');
-            echo $form->LegendText('You are', 'legend', ['class' => 'form-control'], 'legend', 'a', 'Wrap');
-            echo $form->LegendText('You are', 'legend', ['class' => 'form-control', 'position' => 'right'], 'a', 'legend', 'Wrap');
+            echo $form->Yesno('Do you?', 'yesno1', ['class' => 'form-label'], true, 'Wrap');
+            echo $form->Yesno('Faites-vous?', 'yesno2', ['class' => 'form-label', 'yes' => 'si', 'no' => 'nicht'], false, 'Wrap');
+            echo $form->Legendtext('You are', 'legend', ['class' => 'form-control'], 'legend', 'a', 'Wrap');
+            echo $form->Legendtext('You are', 'legend', ['class' => 'form-control', 'position' => 'right'], 'a', 'legend', 'Wrap');
             echo $form->Money('Price', 'price', ['class' => 'form-control'], '12.00', 'Wrap');
-            echo $form->RangeSelect('Selection', 'range', ['class' => 'form-control', 'start' => 5, 'end' => 100, 'step' => 5], 20, 'Wrap');
-            echo $form->RangeSelect('Noitceles', 'egnar', ['class' => 'form-control', 'start' => 2, 'end' => 20, 'step' => 2, 'inverted' => true], 4, 'Wrap');
+            echo $form->Rangeselect('Selection', 'range', ['class' => 'form-control', 'start' => 5, 'end' => 100, 'step' => 5], 20, 'Wrap');
+            echo $form->Rangeselect('Noitceles', 'egnar', ['class' => 'form-control', 'start' => 2, 'end' => 20, 'step' => 2, 'inverted' => true], 4, 'Wrap');
 
             echo $form->Submit('Go To Github', 'Click Here', ['class' => 'btn'], 'Wrap');
             echo $form->close();

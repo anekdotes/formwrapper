@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 
 class BlankControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testLegendTextPrepare()
+    public function testLegendtextPrepare()
     {
         $text = new Blank();
         $expected = '<p class="toaster">value</p>';

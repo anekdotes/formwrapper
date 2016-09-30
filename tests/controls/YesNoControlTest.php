@@ -10,14 +10,14 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\YesNo;
+use Anekdotes\FormWrapper\Controls\Yesno;
 use PHPUnit_Framework_TestCase;
 
-class YesNoControlTest extends PHPUnit_Framework_TestCase
+class YesnoControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testYesNoPrepare()
+    public function testYesnoPrepare()
     {
-        $control = new YesNo();
+        $control = new Yesno();
         $expected = '<div class="radio"><label><input type="radio" checked name="test" value="1"  class="toaster">maybe</label></div><div class="radio"><label><input type="radio" name="test" value="0"  class="toaster">No</label></div>';
         $this->assertEquals($control->prepare(['test', ['class' => 'toaster', 'yes' => 'maybe'], true]), $expected);
     }

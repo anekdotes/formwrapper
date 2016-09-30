@@ -10,14 +10,14 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\RadioGroup;
+use Anekdotes\FormWrapper\Controls\Radiogroup;
 use PHPUnit_Framework_TestCase;
 
-class RadioGroupControlTest extends PHPUnit_Framework_TestCase
+class RadiogroupControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testRadioGroupPrepare()
+    public function testRadiogroupPrepare()
     {
-        $control = new RadioGroup();
+        $control = new Radiogroup();
         $expected = '<div class="radio"><label>toaster<input type="radio" checked name="group" value="1"  class="toaster"></div></label><div class="radio"><label>active<input type="radio" name="group" value="2"  class="toaster"></div></label><div class="radio"><label>help<input type="radio" checked name="group" value="3"  class="toaster"></div></label>';
         $opts = [
             'group',
