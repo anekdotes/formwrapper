@@ -22,7 +22,7 @@ abstract class Control
      *
      * @param string[] $opts Array containg the values to put in the field
      *
-     * @return string The encoded HTML field with the option="value".
+     * @return string The encoded HTML field with the option="value"
      */
     public function getOpts($opts)
     {

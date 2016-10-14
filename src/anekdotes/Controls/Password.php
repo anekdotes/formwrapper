@@ -23,7 +23,7 @@ class Password extends Control
      * @param array $arguments Contains the passed arguments
      *                         [0]  string    $name   Field's name, to be used by the form as a key.
      *                         [1]  string[]  $opts   Contains the option="value" key-value pairs to be added to the field
-     *                         [2]  string    $value  Contains the field's default value.
+     *                         [2]  string    $value  Contains the field's default value
      */
     public function prepare($arguments)
     {

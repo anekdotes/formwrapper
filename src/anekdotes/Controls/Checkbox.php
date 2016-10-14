@@ -24,7 +24,7 @@ class Checkbox extends Control
      *                         [0]  string    $name     Checkbox's name. Can be not unique, but will bind it to a group if not.
      *                         [1]  string    $key      Checkbox's value.
      *                         [2]  string[]  $opts     Contains the option="value" key-value pairs to be added to the field
-     *                         [3]  boolean   $checked  If the checkbox is checked as default.
+     *                         [3]  boolean   $checked  If the checkbox is checked as default
      */
     public function prepare($arguments)
     {

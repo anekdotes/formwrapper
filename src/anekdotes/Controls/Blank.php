@@ -22,7 +22,7 @@ class Blank extends Control
      *
      * @param array $arguments Contains the passed arguments
      *                         [0]  string[]  $opts   Contains the option="value" key-value pairs to be added to the field
-     *                         [1]  string    $value  Contains the field's default value.
+     *                         [1]  string    $value  Contains the field's default value
      */
     public function prepare($arguments)
     {

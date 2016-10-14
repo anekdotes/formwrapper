@@ -25,7 +25,7 @@ class Yesno extends Control
      * @param array $arguments Contains the passed arguments
      *                         [0]  string    $name     Radio's name. Can be not unique, but will bind it to a group if not.
      *                         [1]  string[]  $opts     Contains the option="value" key-value pairs to be added to the field
-     *                         [2]  boolean   $yes      If the yes Radio is checked as default.
+     *                         [2]  boolean   $yes      If the yes Radio is checked as default
      */
     public function prepare($arguments)
     {

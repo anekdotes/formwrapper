@@ -24,7 +24,7 @@ class Radio extends Control
      *                         [0]  string    $name     Radio's name. Can be not unique, but will bind it to a group if not.
      *                         [1]  string    $key      Radio's value.
      *                         [2]  string[]  $opts     Contains the option="value" key-value pairs to be added to the field
-     *                         [3]  boolean   $checked  If the Radio is checked as default.
+     *                         [3]  boolean   $checked  If the Radio is checked as default
      */
     public function prepare($arguments)
     {

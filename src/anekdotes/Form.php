@@ -55,11 +55,11 @@ class Form
     /**
      * Generates the opening of a form and wraps it.
      *
-     * @param string   $url    The url to send the action to.
+     * @param string   $url    The url to send the action to
      * @param string   $method The header request method to send the form (i.e. : GET,POST)
      * @param string[] $opts   Contains the option="value" key-value pairs to be added to the form
      *
-     * @return string The wrapped HTML form.
+     * @return string The wrapped HTML form
      */
     public function open($url, $method, $opts = [])
     {
@@ -84,7 +84,7 @@ class Form
     /**
      * Closes an HTML form.
      *
-     * @return string The HTML closure.
+     * @return string The HTML closure
      */
     public function close()
     {

@@ -10,15 +10,15 @@
 
 namespace Tests;
 
-use Anekdotes\FormWrapper\Controls\Radiogroup;
+use Anekdotes\FormWrapper\Controls\Select;
 use PHPUnit_Framework_TestCase;
 
-class RadioGroupControlTest extends PHPUnit_Framework_TestCase
+class SelectControlTest extends PHPUnit_Framework_TestCase
 {
-    public function testRadiogroupPrepare()
+    public function testSelectPrepare()
     {
-        $control = new Radiogroup();
-        $expected = '<div class="radio"><label>toaster<input type="radio" checked name="group" value="1"  class="toaster"></div></label><div class="radio"><label>active<input type="radio" name="group" value="2"  class="toaster"></div></label><div class="radio"><label>help<input type="radio" checked name="group" value="3"  class="toaster"></div></label>';
+        $control = new Select();
+        $expected = '<select name="group"  class="toaster"><option value="" class="form-option">PlaceHolder</option><option value="1" selected="selected" class="form-option">toaster</option><option value="2" class="form-option">active</option><option value="3" class="form-option">help</option></select>';
         $opts = [
             'group',
             [
@@ -29,8 +29,8 @@ class RadioGroupControlTest extends PHPUnit_Framework_TestCase
             ['class' => 'toaster'],
             [
                 1,
-                3,
-          ],
+            ],
+            'PlaceHolder',
         ];
         $this->assertEquals($control->prepare($opts), $expected);
     }
