@@ -18,7 +18,7 @@ class YesNoControlTest extends PHPUnit_Framework_TestCase
     public function testYesnoPrepare()
     {
         $control = new Yesno();
-        $expected = '<div class="radio"><label><input type="radio" checked name="test" value="1"  class="toaster">maybe</label></div><div class="radio"><label><input type="radio" name="test" value="0"  class="toaster">No</label></div>';
+        $expected = '<div class="radio"><label>maybe<input type="radio" checked name="test" value="1"  class="toaster"></label></div><div class="radio"><label>No<input type="radio" name="test" value="0"  class="toaster"></label></div>';
         $this->assertEquals($control->prepare(['test', ['class' => 'toaster', 'yes' => 'maybe'], true]), $expected);
     }
 }

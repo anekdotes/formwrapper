@@ -36,15 +36,15 @@ class Yesno extends Control
         $noLang = Arr::get($opts, 'no', 'No');
         Arr::remove('yes', $opts);
         Arr::remove('no', $opts);
-        $html = '<div class="radio"><label>';
+        $html = '<div class="radio"><label>'.$yesLang;
         $radio = new Radio();
         $html .= $radio->prepare([$name, '1', $opts, $yes]);
-        $html .= $yesLang.'</label></div>';
+        $html .= '</label></div>';
 
-        $html .= '<div class="radio"><label>';
+        $html .= '<div class="radio"><label>'.$noLang;
         $radio = new Radio();
         $html .= $radio->prepare([$name, '0', $opts, !$yes]);
-        $html .= $noLang.'</label></div>';
+        $html .= '</label></div>';
 
         return $html;
     }
