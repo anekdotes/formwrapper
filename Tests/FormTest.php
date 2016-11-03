@@ -22,6 +22,13 @@ class FormTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($text, '<input type="text" name="toaster" value="default" class="form-control"/>');
     }
 
+    public function testCaseSensitivityWithFurthercaps()
+    {
+        $form = new Form();
+        $text = $form->TeXt('toaster', 'toaster', [], 'default', 'None');
+        $this->assertEquals($text, '<input type="text" name="toaster" value="default" class="form-control"/>');
+    }
+
     public function testIntegrationForm()
     {
         $form = new Form();
