@@ -47,7 +47,7 @@ It is possible to write your own controls and wrappers and use them.
 
     class MyWrapper extends Wrapper
     {
-        public function handle($input, $title)
+        public function handle($input, $title = '')
         {
             return '<div class="MyCustomLabel">'.$title.'</div><div>'.$input.'</div>';
         }
