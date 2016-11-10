@@ -74,8 +74,8 @@ It is possible to write your own controls and wrappers and use them.
 ```
 
     $form = new Anekdotes\FormWrapper\Form;
-    $form->wrappersNamespace = 'MyCustomWrapper';
-    $form->controlsNamespace = 'MyCustomControl';
+    $form->wrappersNamespace = 'MyCustomWrapper//';
+    $form->controlsNamespace = 'MyCustomControl//';
     echo($form->open('www.toaster.com', post, ["class" => "form"]));
     echo($form->MyControl('toaster', 'toaster', 'MyWrapper'));
     echo($form->close());
