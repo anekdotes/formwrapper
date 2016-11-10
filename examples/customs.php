@@ -10,8 +10,8 @@
             require __DIR__.'/../vendor/autoload.php';
             // Please note that the Custom Wrapper and Control are defined in the examples/CustomNamespace folder
             $form = new \Anekdotes\FormWrapper\Form();
-            $form->wrappersNamespace = "CustomNamespace\\";
-            $form->controlsNamespace = "CustomNamespace\\";
+            $form->wrappersNamespace = 'CustomNamespace\\';
+            $form->controlsNamespace = 'CustomNamespace\\';
             echo $form->open('http://www.github.com', 'post', ['class' => 'form']);
             echo $form->SuperControl('This label appears twice OMG', 'Text to appear in the input OMG', ['class' => 'form-control'], 'SuperWrap');
             echo $form->close();
