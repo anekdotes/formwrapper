@@ -15,32 +15,33 @@ Allows instantiation of standardized custom form wrappers. Eases extandability o
 Install via composer into your project:
 
     composer require anekdotes/formwrapper
+
+Please note that using composer allows easy namespacing for using classes later on. 
+Following examples use a composer based namespace autoloading.
     
 ## Basic Usage
 
-```
-<?php
+```php
     $form = new Anekdotes\FormWrapper\Form;
     echo($form->open('www.toaster.com', post, ["class" => "form"]));
     echo($form->Text('label', 'toaster', ["class" => "form-stuff"], 'val'));
     echo($form->close());
-?>
 ```
 
 will output
-```
+```html
     <form action="www.toaster.com" method="form" class="form">
     <input type="text" name="toaster" value="val class="form-stuff" />
     </form>
 ```    
 
-All built-in Controls and Wrappers can be found in the folder ```examples```
+All built-in Controls and Wrappers can be found in the folder ```examples```. To have the required namespaces autoloaded, you will need to run ```composer install```
 
 ## Extending Controls and Wrappers
 
 It is possible to write your own controls and wrappers and use them.
 
-```
+```php
     namespace MyCustomWrapper;
 
     use Anekdotes\FormWrapper\Wrappers\Wrapper;
@@ -54,7 +55,7 @@ It is possible to write your own controls and wrappers and use them.
     }
 ```
 
-```
+```php
     namespace MyCustomControl;
 
     use Anekdotes\FormWrapper\Controls\Control;
@@ -71,15 +72,13 @@ It is possible to write your own controls and wrappers and use them.
     }
 ```
 
-```
-
+```php
     $form = new Anekdotes\FormWrapper\Form;
     $form->wrappersNamespace = 'MyCustomWrapper//';
     $form->controlsNamespace = 'MyCustomControl//';
     echo($form->open('www.toaster.com', post, ["class" => "form"]));
     echo($form->MyControl('toaster', 'toaster', 'MyWrapper'));
     echo($form->close());
-
 ```
 ## Contributing
 
@@ -89,4 +88,4 @@ Pull requests must have tests included (excepted for the scss). If no tests are 
 
 ## Note
 
-Most of the wrappers use classes from Bootstrap.
+Most of the wrappers use css classes from Bootstrap.
