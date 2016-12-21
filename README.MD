@@ -86,6 +86,11 @@ Pull requests are welcome. Note that if you want to develop the scss files, you 
 
 Pull requests must have tests included (excepted for the scss). If no tests are to be found, if the pull request does not pass the current test suite or if the tests do not cover enough cases, the pull requests may not be merged. 
 
+## Examples
+
+The folder /examples contains PHP examples of a lot of wrappers in use. (pre-built + customs).
+To see them in browser, you'll need to bootup a php server pointing on the examples folder and running ```composer install``` at the root of this project. 
+
 ## Note
 
-Most of the wrappers use css classes from Bootstrap.
+Most of the pre-built wrappers use css classes from Bootstrap.
