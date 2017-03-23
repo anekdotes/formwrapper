@@ -48,6 +48,7 @@ class Select extends Control
         }
         foreach ($elements as $element) {
             $option = new Option();
+            $element = (array) $element;
             $html .= $option->prepare([$element[$hValue], $element[$hKey], ['class' => 'form-option'], in_array($element[$hKey], $values)]);
         }
         $html .= '</select>';
