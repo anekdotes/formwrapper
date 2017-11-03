@@ -41,16 +41,30 @@ class Select extends Control
         $hValue = Arr::get($opts, 'value', 'name');
         Arr::remove('key', $opts);
         Arr::remove('value', $opts);
+
+        $hValues = explode('|', $hValue);
         $html = '<select name="'.$name.'" '.$this->getOpts($opts).'>';
+
         if ($placeholder != '') {
             $option = new Option();
             $html .= $option->prepare([$placeholder, '', ['class' => 'form-option'], false]);
         }
+
         foreach ($elements as $element) {
             $option = new Option();
             $element = (array) $element;
-            $html .= $option->prepare([$element[$hValue], $element[$hKey], ['class' => 'form-option'], in_array($element[$hKey], $values)]);
+
+            $nHValues = [];
+            foreach ($hValues as $hv) {
+                if (isset($element[$hv])) {
+                    $nHValues[] = $element[$hv];
+                }
+            }
+            $nHValues = implode(' - ', $nHValues);
+
+            $html .= $option->prepare([$nHValues, $element[$hKey], ['class' => 'form-option'], in_array($element[$hKey], $values)]);
         }
+
         $html .= '</select>';
 
         return $html;

@@ -34,4 +34,24 @@ class SelectControlTest extends PHPUnit_Framework_TestCase
         ];
         $this->assertEquals($control->prepare($opts), $expected);
     }
+
+    public function testSelectPrepareTwo()
+    {
+        $control = new Select();
+        $expected = '<select name="group"  class="toaster"><option value="" class="form-option">PlaceHolder</option><option value="1" selected="selected" class="form-option">ca - toaster</option><option value="2" class="form-option">ca - active</option><option value="3" class="form-option">ca - help</option></select>';
+        $opts = [
+            'group',
+            [
+                ['id' => 1, 'name' => 'toaster', 'country' => 'ca'],
+                ['id' => 2, 'name' => 'active', 'country' => 'ca'],
+                ['id' => 3, 'name' => 'help', 'country' => 'ca'],
+            ],
+            ['class' => 'toaster', 'value' => 'country|name'],
+            [
+                1,
+            ],
+            'PlaceHolder',
+        ];
+        $this->assertEquals($control->prepare($opts), $expected);
+    }
 }
