@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Text;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TextControlTest extends PHPUnit_Framework_TestCase
+final class TextControlTest extends TestCase
 {
     public function testTextPrepare()
     {

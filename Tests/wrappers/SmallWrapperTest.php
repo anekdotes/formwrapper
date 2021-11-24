@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\Small;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SmallWrapperTest extends PHPUnit_Framework_TestCase
+final class SmallWrapperTest extends TestCase
 {
     public function testSmallHandle()
     {

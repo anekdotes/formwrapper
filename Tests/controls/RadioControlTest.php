@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Radio;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class RadioControlTest extends PHPUnit_Framework_TestCase
+final class RadioControlTest extends TestCase
 {
     public function testRadioPrepare()
     {

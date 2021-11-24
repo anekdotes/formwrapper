@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\None;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class NoneWrapperTest extends PHPUnit_Framework_TestCase
+final class NoneWrapperTest extends TestCase
 {
     public function testNoneHandle()
     {

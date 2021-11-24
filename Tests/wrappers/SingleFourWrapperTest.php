@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\SingleFour;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SingleFourWrapperTest extends PHPUnit_Framework_TestCase
+final class SingleFourWrapperTest extends TestCase
 {
     public function testSingleFourHandle()
     {

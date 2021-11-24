@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Blank;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class BlankControlTest extends PHPUnit_Framework_TestCase
+final class BlankControlTest extends TestCase
 {
     public function testLegendtextPrepare()
     {

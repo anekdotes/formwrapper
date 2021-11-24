@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Textarea;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TextareaControlTest extends PHPUnit_Framework_TestCase
+final class TextareaControlTest extends TestCase
 {
     public function testTextareaPrepare()
     {

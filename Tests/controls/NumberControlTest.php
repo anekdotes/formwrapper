@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Number;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class NumberControlTest extends PHPUnit_Framework_TestCase
+final class NumberControlTest extends TestCase
 {
     public function testNumberPrepare()
     {

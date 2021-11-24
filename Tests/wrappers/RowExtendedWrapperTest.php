@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\RowExtended;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class RowExtendedWrapperTest extends PHPUnit_Framework_TestCase
+final class RowExtendedWrapperTest extends TestCase
 {
     public function testRowExtendedHandle()
     {

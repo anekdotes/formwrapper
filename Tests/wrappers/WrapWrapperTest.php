@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\Wrap;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class WrapWrapperTest extends PHPUnit_Framework_TestCase
+final class WrapWrapperTest extends TestCase
 {
     public function testWrapHandle()
     {

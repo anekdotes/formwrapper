@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Label;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class LabelControlTest extends PHPUnit_Framework_TestCase
+final class LabelControlTest extends TestCase
 {
     public function testLabelPrepare()
     {

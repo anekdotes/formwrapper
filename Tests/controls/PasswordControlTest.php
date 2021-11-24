@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Password;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class PasswordControlTest extends PHPUnit_Framework_TestCase
+final class PasswordControlTest extends TestCase
 {
     public function testPasswordPrepare()
     {

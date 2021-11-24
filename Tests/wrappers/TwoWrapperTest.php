@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\Two;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TwoWrapperTest extends PHPUnit_Framework_TestCase
+final class TwoWrapperTest extends TestCase
 {
     public function testTwoHandle()
     {

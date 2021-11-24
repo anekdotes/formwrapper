@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Yesno;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class YesNoControlTest extends PHPUnit_Framework_TestCase
+final class YesNoControlTest extends TestCase
 {
     public function testYesnoPrepare()
     {

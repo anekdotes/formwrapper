@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Legendtext;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class LegendTextControlTest extends PHPUnit_Framework_TestCase
+final class LegendTextControlTest extends TestCase
 {
     public function testLegendtextPrepare()
     {

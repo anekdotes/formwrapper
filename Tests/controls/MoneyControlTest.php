@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Money;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class MoneyControlTest extends PHPUnit_Framework_TestCase
+final class MoneyControlTest extends TestCase
 {
     public function testMoneyPrepare()
     {

@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\SingleSix;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SingleSixWrapperTest extends PHPUnit_Framework_TestCase
+final class SingleSixWrapperTest extends TestCase
 {
     public function testSingleSixHandle()
     {

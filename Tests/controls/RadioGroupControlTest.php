@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Radiogroup;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class RadioGroupControlTest extends PHPUnit_Framework_TestCase
+final class RadioGroupControlTest extends TestCase
 {
     public function testRadiogroupPrepare()
     {

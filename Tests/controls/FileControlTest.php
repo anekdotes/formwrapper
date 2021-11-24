@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\File;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class FileControlTest extends PHPUnit_Framework_TestCase
+final class FileControlTest extends TestCase
 {
     public function testFilePrepare()
     {

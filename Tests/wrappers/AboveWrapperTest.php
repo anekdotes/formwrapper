@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\Above;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class AboveWrapperTest extends PHPUnit_Framework_TestCase
+final class AboveWrapperTest extends TestCase
 {
     public function testAboveHandle()
     {

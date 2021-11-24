@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Rangeselect;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class RangeSelectControlTest extends PHPUnit_Framework_TestCase
+final class RangeSelectControlTest extends TestCase
 {
     public function testRangeselectPrepare()
     {

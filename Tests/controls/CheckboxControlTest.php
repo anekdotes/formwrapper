@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Checkbox;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class CheckboxControlTest extends PHPUnit_Framework_TestCase
+final class CheckboxControlTest extends TestCase
 {
     public function testCheckboxPrepare()
     {

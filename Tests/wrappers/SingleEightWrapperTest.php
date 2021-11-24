@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Wrappers\SingleEight;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SingleEightWrapperTest extends PHPUnit_Framework_TestCase
+final class SingleEightWrapperTest extends TestCase
 {
     public function testSingleEightHandle()
     {

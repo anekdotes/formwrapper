@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Submit;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SubmitControlTest extends PHPUnit_Framework_TestCase
+final class SubmitControlTest extends TestCase
 {
     public function testSubmitTextPrepare()
     {

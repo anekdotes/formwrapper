@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Hidden;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class HiddenControlTest extends PHPUnit_Framework_TestCase
+final class HiddenControlTest extends TestCase
 {
     public function testHiddenPrepare()
     {

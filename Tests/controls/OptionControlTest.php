@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Option;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class OptionControlTest extends PHPUnit_Framework_TestCase
+final class OptionControlTest extends TestCase
 {
     public function testOptionPrepare()
     {

@@ -11,9 +11,9 @@
 namespace Tests;
 
 use Anekdotes\FormWrapper\Controls\Select;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SelectControlTest extends PHPUnit_Framework_TestCase
+final class SelectControlTest extends TestCase
 {
     public function testSelectPrepare()
     {
