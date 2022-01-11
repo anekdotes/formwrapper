@@ -19,11 +19,13 @@ class Form
 {
     public $controlsNamespace;
     public $wrappersNamespace;
+    public $defaultWrapper;
 
-    public function __construct($controls = '', $wrappers = '')
+    public function __construct($controls = '', $wrappers = '', $defaultWrapper = 'None')
     {
         $this->controlsNamespace = $controls == '' ? 'Anekdotes\\FormWrapper\\Controls\\' : $controls;
         $this->wrappersNamespace = $wrappers == '' ? 'Anekdotes\\FormWrapper\\Wrappers\\' : $wrappers;
+        $this->defaultWrapper = $defaultWrapper == '' ? 'None' : $defaultWrapper;
     }
 
     /**
@@ -95,7 +97,7 @@ class Form
 
     private function obtainWrapperName($control, $arguments)
     {
-        $currentWrapper = 'None';
+        $currentWrapper = $this->defaultWrapper;
         $wrapperNameSpace = $this->wrappersNamespace;
         $nbParams = $control->getNbParams();
         //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1
