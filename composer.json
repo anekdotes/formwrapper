@@ -1,6 +1,6 @@
 {
   "name": "anekdotes/formwrapper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "library",
   "description": "Allows wrapping of form controls.",
   "keywords": [

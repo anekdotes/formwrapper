@@ -13,7 +13,7 @@ namespace Anekdotes\FormWrapper\Wrappers;
 /**
  * Doesn't wrap the input in anything.
  */
-class newWrap
+class LteWrap
 {
     public function handle($input)
     {
