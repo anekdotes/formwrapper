@@ -20,12 +20,23 @@ class Form
     public $controlsNamespace;
     public $wrappersNamespace;
     public $defaultWrapper;
+    private $ignoreUndefinedWrap = false;
 
     public function __construct($controls = '', $wrappers = '', $defaultWrapper = 'None')
     {
         $this->controlsNamespace = $controls == '' ? 'Anekdotes\\FormWrapper\\Controls\\' : $controls;
         $this->wrappersNamespace = $wrappers == '' ? 'Anekdotes\\FormWrapper\\Wrappers\\' : $wrappers;
         $this->defaultWrapper = $defaultWrapper == '' ? 'None' : $defaultWrapper;
+    }
+
+    public function setIngoreUndefinedWrap($ignore)
+    {
+        $this->ignoreUndefinedWrap = $ignore;
+    }
+
+    public function getIngoreUndefinedWrap()
+    {
+        return $this->ignoreUndefinedWrap;
     }
 
     /**
@@ -49,6 +60,13 @@ class Form
         $args = array_slice($arguments, 1, count($arguments) - $slice);
         $prepared = $control->prepare($args);
         $wrapStr = $this->obtainWrapperName($control, $arguments);
+        
+        if ($this->ignoreUndefinedWrap) {
+            if (!class_exists($wrapStr)) {
+                return '';
+            }
+        }
+
         $wrap = new $wrapStr();
 
         return $wrap->handle($prepared, $title);
@@ -103,7 +121,9 @@ class Form
         //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1
         if ($nbParams < count($arguments) - 1) {
             end($arguments);
-            $currentWrapper = current($arguments);
+
+            //force Pascal case class
+            $currentWrapper = ucfirst(strtolower(current($arguments)));
         }
 
         return $wrapperNameSpace.$currentWrapper;
