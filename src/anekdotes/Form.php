@@ -51,10 +51,12 @@ class Form
     public function __call($name, $arguments)
     {
         $title = $arguments[0];
-        $controlStr = $this->controlsNamespace.$name;
+        $controlStr = $this->controlsNamespace . $name;
+
         if (!class_exists($controlStr)) {
-            $controlStr = $this->controlsNamespace.ucfirst($name);
+            $controlStr = $this->controlsNamespace . ucfirst($name);
         }
+
         $control = new $controlStr();
         $slice = $control->getNbParams() < count($arguments) - 1 ? 0 : 1;
         $args = array_slice($arguments, 1, count($arguments) - $slice);
@@ -84,18 +86,22 @@ class Form
     public function open($url, $method, $opts = [])
     {
         $realMethod = $method;
+
         if ($realMethod != 'get') {
             $realMethod = 'post';
         }
+
         if (!array_key_exists('class', $opts)) {
             $opts['class'] = 'form-horizontal';
         }
+
         $html = "<form action=\"$url\" method=\"$realMethod\"";
         $control = new Text();
         $html .= $control->getOpts($opts);
         $html .= '>';
+
         if ($method != 'get' && $method != 'post') {
-            $html .= '<input type="hidden" name="_method" value="'.$method.'" />'."\n";
+            $html .= '<input type="hidden" name="_method" value="' . $method . '" />'."\n";
         }
 
         return $html;
@@ -118,12 +124,12 @@ class Form
         $currentWrapper = $this->defaultWrapper;
         $wrapperNameSpace = $this->wrappersNamespace;
         $nbParams = $control->getNbParams();
+        
         //We have normally have x+2 $arguments ('title' and 'wrap'). If we're missing wrap , we'll have x+1
         if ($nbParams < count($arguments) - 1) {
             end($arguments);
 
-            //force Pascal case class
-            $currentWrapper = ucfirst(strtolower(current($arguments)));
+            $currentWrapper = current($arguments);
         }
 
         return $wrapperNameSpace.$currentWrapper;
